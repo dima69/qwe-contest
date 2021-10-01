@@ -4,40 +4,51 @@ import Image from "next/image";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <header className="flex items-center w-full justify-center text-3xl bg-gray-50">
-        <a
-          className="text-blue-500 hover:bg-green-50 py-2 px-5 md:px-20 rounded-md hover:shadow-md hover:text-green-600"
-          href="/"
-        >
-          Go
-        </a>
-        <a
-          className="text-blue-500 hover:bg-pink-50 py-2 px-5 md:px-20 rounded-md hover:shadow-md hover:text-pink-600"
-          href="/leaderboard"
-        >
-          Leaderboard
-        </a>
-        <a
-          className="text-blue-500 hover:bg-yellow-50 py-2 px-5 md:px-20 rounded-md hover:shadow-md hover:text-yellow-600"
-          href="history"
-        >
-          History
-        </a>
+      {/* max width and items between and center */}
+      <header className="bg-gray-50">
+        <div className="flex text-3xl max-w-3xl justify-between mx-auto">
+          <a
+            className="text-blue-500 hover:bg-green-50 py-2 px-5 rounded-md hover:shadow-md hover:text-green-600"
+            href="/"
+          >
+            Go
+          </a>
+          <a
+            className="text-blue-500 hover:bg-pink-50 py-2 px-5 rounded-md hover:shadow-md hover:text-pink-600"
+            href="/leaderboard"
+          >
+            Leaderboard
+          </a>
+          <a
+            className="text-blue-500 hover:bg-yellow-50 py-2 px-5 rounded-md hover:shadow-md hover:text-yellow-600"
+            href="history"
+          >
+            History
+          </a>
+        </div>
       </header>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <div>first</div>
-          <div>
-            <span>VS.</span>
+      <main>
+        {/* <div className="flex flex-wrap max-w-7xl mx-auto">
+          <div className="relative min-w-max w-1/2 h-96">
+            <Image src="/me.jpg" layout="fill" objectFit="scale-down" />
           </div>
-          <div>second</div>
+          <div className="relative min-w-max w-1/2 h-96">
+            <Image src="/me1.jpg" layout="fill" objectFit="scale-down" />
+          </div>
+        </div> */}
+        <div className="grid grid-rows-2 grid-cols-1 md:grid-cols-2 md:grid-rows-1">
+          <div className="relative h-96 min-w-full my-2">
+            <Image src="/me.jpg" layout="fill" objectFit="scale-down" />
+          </div>
+          <div className="relative h-96 min-w-full my-2">
+            <Image src="/me1.jpg" layout="fill" objectFit="scale-down" />
+          </div>
         </div>
       </main>
 
