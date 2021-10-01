@@ -44,10 +44,10 @@ const Home: NextPage = () => {
         </div> */}
         <div className="grid grid-rows-2 grid-cols-1 md:grid-cols-2 md:grid-rows-1">
           <div className="relative h-96 min-w-full my-2">
-            <Image src="/me.jpg" layout="fill" objectFit="scale-down" />
+            <Image src="/me.jpg" layout="fill" objectFit="scale-down" className="hover:brightness-95 hover:cursor-pointer" />
           </div>
           <div className="relative h-96 min-w-full my-2">
-            <Image src="/me1.jpg" layout="fill" objectFit="scale-down" />
+            <Image src="/me1.jpg" layout="fill" objectFit="scale-down" className="hover:brightness-95 hover:cursor-pointer" />
           </div>
         </div>
       </main>
