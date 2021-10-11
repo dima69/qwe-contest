@@ -2,7 +2,7 @@ const NavigationBar = () => {
     return (
         // max width and items between and center
         <header className="bg-gray-50">
-            <div className="flex text-3xl max-w-3xl justify-between mx-auto">
+            <div className="flex flex-col md:flex-row text-2xl md:text-3xl max-w-3xl md:justify-between mx-auto text-center">
                 <a
                     className="text-blue-500 hover:bg-green-50 py-2 px-5 rounded-md hover:shadow-md hover:text-green-600"
                     href="/"
