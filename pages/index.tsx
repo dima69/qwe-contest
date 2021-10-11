@@ -9,22 +9,22 @@ const Home: NextPage = () => {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        {/* <div className="flex flex-wrap max-w-7xl mx-auto">
-          <div className="relative min-w-max w-1/2 h-96">
+      <main className="h-full">
+        <div className="flex flex-wrap justify-evenly items-center h-full">
+          <div className="m-2 flex-1-1-576 max-w-2xl">
+            <img src="/me.jpg" alt="" className="hover:brightness-95 max-h-screen" />
+            <a className="text-blue-400" href="/">open original</a>
+          </div>
+          <div className="m-2 flex-1-1-576 max-w-2xl">
+            <img src="/me3.jpeg" alt="" className="hover:brightness-95 max-h-screen" />
+            <a className="text-blue-400 text-right" href="/me3.jpeg">open original</a>
+          </div>
+          {/* <div className="relative flex-1-1-300">
             <Image src="/me.jpg" layout="fill" objectFit="scale-down" />
-          </div>
-          <div className="relative min-w-max w-1/2 h-96">
+          </div> */}
+          {/* <div className="relative flex-1-1-300">
             <Image src="/me1.jpg" layout="fill" objectFit="scale-down" />
-          </div>
-        </div> */}
-        <div className="grid grid-rows-2 grid-cols-1 md:grid-cols-2 md:grid-rows-1">
-          <div className="relative h-96 min-w-full my-2">
-            <Image src="/me.jpg" layout="fill" objectFit="scale-down" className="hover:brightness-95 hover:cursor-pointer" />
-          </div>
-          <div className="relative h-96 min-w-full my-2">
-            <Image src="/me1.jpg" layout="fill" objectFit="scale-down" className="hover:brightness-95 hover:cursor-pointer" />
-          </div>
+          </div> */}
         </div>
       </main>
     </div>
