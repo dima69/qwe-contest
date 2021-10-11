@@ -7,4 +7,16 @@
   .grid-auto-1fr-auto {
     grid-template-rows: auto 1fr auto;
   }
+
+  .flex-1-1-576 {
+    flex: 1 1 576px;
+    background: lightpink;
+    border: 1px solid red;
+  }
+
+  .flex-0-1-300 {
+    flex: 0 1 300px;
+    background: lightpink;
+    border: 1px solid red;
+  }
 }
