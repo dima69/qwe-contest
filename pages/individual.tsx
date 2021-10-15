@@ -10,7 +10,7 @@ const Individual: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <span className="text-center">Individual page</span>
+        <span className="text-center">Individual ratings page</span>
       </main>
     </>
   );
