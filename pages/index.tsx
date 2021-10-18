@@ -16,7 +16,7 @@ const Home: NextPage = () => {
             <a className="text-blue-400" href="/">open original</a>
           </div>
           <div className="m-2 flex-1-1-576 max-w-2xl">
-            <img src="/me3.jpeg" alt="" className="hover:brightness-95 max-h-screen" />
+            <img src="/me4.jpg" alt="" className="hover:brightness-95 max-h-screen" />
             <a className="text-blue-400 text-right" href="/me3.jpeg">open original</a>
           </div>
           {/* <div className="relative flex-1-1-300">
