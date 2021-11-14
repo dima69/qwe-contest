@@ -11,7 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // @@@
     response.push({
       user_id: filename.slice(0, 1),
-      image_url: filename,
+      image_url: `/${filename}`,
     })
   }
   res.status(200).json(response)
