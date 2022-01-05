@@ -1,33 +1,37 @@
 import type { NextPage } from "next";
-import Head from "next/head";
 import Image from "next/image";
+import useSWR from "swr";
+
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
 const Home: NextPage = () => {
+  const { data, error } = useSWR<ContestantData[]>("/api/getPair", fetcher, {
+    revalidateOnFocus: false,
+  });
+  if (error) return <div>failed to load {error}</div>;
+  if (!data) return <div>loading...</div>;
+
   return (
-    <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <main className="h-full">
-        <div className="flex flex-wrap justify-evenly items-center h-full">
-          <div className="m-2 flex-1-1-576 max-w-2xl">
-            <img src="/me.jpg" alt="" className="hover:brightness-95 max-h-screen" />
-            <a className="text-blue-400" href="/">open original</a>
+    <main className="h-full">
+      <div className="flex flex-wrap justify-evenly items-center h-full">
+        {/* @@@ button? */}
+        {data.map((item) => (
+          <div
+            className="flex-1 w-full min-w-[350px] max-w-[600px] m-1 border hover:brightness-90 bg-red-200 box-border cursor-pointer"
+            key={item.user_id}
+          >
+            <Image
+              src={item.image_url}
+              layout="responsive"
+              width={600}
+              height={600}
+              objectFit="cover"
+              alt=""
+            />
           </div>
-          <div className="m-2 flex-1-1-576 max-w-2xl">
-            <img src="/me4.jpg" alt="" className="hover:brightness-95 max-h-screen" />
-            <a className="text-blue-400 text-right" href="/me3.jpeg">open original</a>
-          </div>
-          {/* <div className="relative flex-1-1-300">
-            <Image src="/me.jpg" layout="fill" objectFit="scale-down" />
-          </div> */}
-          {/* <div className="relative flex-1-1-300">
-            <Image src="/me1.jpg" layout="fill" objectFit="scale-down" />
-          </div> */}
-        </div>
-      </main>
-    </div>
+        ))}
+      </div>
+    </main>
   );
 };
 
