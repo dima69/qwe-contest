@@ -10,7 +10,7 @@ interface PostComment {
 }
 
 interface PostData {
-  pic_id: string;
+  photo_id: string;
   comments: PostComment[];
   average_score: number;
   image_url: string;

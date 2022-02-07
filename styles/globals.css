@@ -4,19 +4,23 @@
 
 
 @layer utilities {
-  .grid-auto-1fr-auto {
-    grid-template-rows: auto 1fr auto;
+  .grid-bitch {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-columns: 1fr; */
+    /* grid-auto-rows: px; */
   }
 
-  .flex-1-1-576 {
-    flex: 1 1 576px;
-    background: lightpink;
-    border: 1px solid red;
+  .grid-with-comments {
+    grid-template-columns: minmax(300px, 640px) minmax(150px, 1fr);
   }
 
-  .flex-0-1-300 {
-    flex: 0 1 300px;
-    background: lightpink;
-    border: 1px solid red;
+  .grid-fuck {
+    display: grid;
+    grid-template-columns: minmax(400px, 1fr);
+  }
+
+  .grid-eba {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
 }
